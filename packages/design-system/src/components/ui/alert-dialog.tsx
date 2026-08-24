@@ -24,8 +24,8 @@
 
 import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
-import { modalTitleClass } from "@dubo/design-system-shared/components/ui/modal-typography";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { modalTitleClass } from "dubo-design-system/components/ui/modal-typography";
+import { cn } from "dubo-design-system/lib/utils";
 import { buttonVariants } from "./button";
 
 const AlertDialog = AlertDialogPrimitive.Root;

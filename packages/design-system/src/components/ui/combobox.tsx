@@ -3,17 +3,17 @@
 import * as React from "react";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 import { Command as CommandPrimitive } from "cmdk";
-import { Check, ChevronDown, Search } from "@dubo/design-system-shared/lib/icons";
+import { Check, ChevronDown, Search } from "dubo-design-system/lib/icons";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { Label } from "@dubo/design-system-shared/components/ui/label";
+import { cn } from "dubo-design-system/lib/utils";
+import { Label } from "dubo-design-system/components/ui/label";
 import {
   fieldBodyLgClass,
   fieldDescriptionClass,
   fieldTransitionClass,
   floatingLabelCompactClass,
   floatingLabelIdleClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 
 /**
  * Dubo Design System — Combobox

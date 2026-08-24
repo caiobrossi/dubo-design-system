@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { cva } from "class-variance-authority";
-import { Check } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { Check } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 /* -------------------------------------------------------------------------- */
 /*  Context                                                                   */

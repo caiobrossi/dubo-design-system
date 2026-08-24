@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { dateFieldHelpers } from "@dubo/design-system-shared/components/ui/date-field";
+import { dateFieldHelpers } from "dubo-design-system/components/ui/date-field";
 
 describe("date field year input", () => {
   it("does not clamp a future year needed by expiry-date fields", () => {

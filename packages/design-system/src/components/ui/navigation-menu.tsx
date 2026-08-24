@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { ChevronDown } from "@dubo/design-system-shared/lib/icons";
+import { ChevronDown } from "dubo-design-system/lib/icons";
 import { cva } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 import {
   fieldBodyMdClass,
   fieldTransitionClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 
 /**
  * Dubo Design System — Navigation Menu

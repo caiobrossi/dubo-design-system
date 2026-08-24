@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronRight, Circle } from "@dubo/design-system-shared/lib/icons";
+import { Check, ChevronRight, Circle } from "dubo-design-system/lib/icons";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 export const dropdownPanelClasses = [
   "z-50 overflow-hidden",

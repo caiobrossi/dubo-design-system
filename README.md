@@ -42,9 +42,22 @@ Storybook build.
 
 ## Package status
 
-The source package is `@dubo/design-system-shared`. It is currently distributed with Dubo's
-applications and is not published to npm. The `private` package flag prevents accidental registry
-publication.
+The installable package is `dubo-design-system`. It supports React 18.2 and React 19, ships a
+complete precompiled stylesheet, and includes a Vite + React 18 verification flow for Figma Make.
+
+```bash
+npm install dubo-design-system
+```
+
+```tsx
+import { Button, DuboProvider } from "dubo-design-system";
+import "dubo-design-system/styles/figma-make.css";
+```
+
+Prepared Make-kit guidelines live in `packages/design-system/figma-make/guidelines`.
+
+The compatibility contract follows Figma's official requirements for
+[React 18 and Vite packages](https://developers.figma.com/docs/code/bring-your-design-system-package/).
 
 ## Licensing
 

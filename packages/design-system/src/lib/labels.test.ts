@@ -2,15 +2,15 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
-import { Badge } from "@dubo/design-system-shared/components/ui/badge";
-import { PageHeader } from "@dubo/design-system-shared/components/ui/page-header";
+import { Badge } from "dubo-design-system/components/ui/badge";
+import { PageHeader } from "dubo-design-system/components/ui/page-header";
 import {
   Pagination,
   PaginationEllipsis,
   PaginationNext,
   PaginationPrevious,
-} from "@dubo/design-system-shared/components/ui/pagination";
-import { DesignSystemLabelsProvider } from "@dubo/design-system-shared/lib/labels";
+} from "dubo-design-system/components/ui/pagination";
+import { DesignSystemLabelsProvider } from "dubo-design-system/lib/labels";
 
 /**
  * O `aria-label` destes botões nunca passa por quem os usa, por isso a única

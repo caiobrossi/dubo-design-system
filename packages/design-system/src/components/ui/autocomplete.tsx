@@ -3,10 +3,10 @@
 import * as React from "react";
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
 import { cva, type VariantProps } from "class-variance-authority";
-import { Check, ChevronDown, X } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { Command, CommandList } from "@dubo/design-system-shared/components/ui/command";
-import { dropdownPanelClasses } from "@dubo/design-system-shared/components/ui/dropdown-menu";
+import { Check, ChevronDown, X } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { Command, CommandList } from "dubo-design-system/components/ui/command";
+import { dropdownPanelClasses } from "dubo-design-system/components/ui/dropdown-menu";
 import { Button } from "./button";
 import { Label } from "./label";
 import {
@@ -19,8 +19,8 @@ import {
   fieldTransitionClass,
   floatingLabelCompactClass,
   floatingLabelIdleClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
+} from "dubo-design-system/components/ui/field-styles";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
 
 type AutocompleteChangeEventDetails = ComboboxPrimitive.Root.ChangeEventDetails;
 

@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { ArrowDown, ArrowUp, ArrowUpDown } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { ArrowDown, ArrowUp, ArrowUpDown } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 /**
  * Dubo Design System — Table

@@ -3,8 +3,8 @@
 import * as React from "react";
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 import { type VariantProps } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { toggleVariants } from "@dubo/design-system-shared/components/ui/toggle";
+import { cn } from "dubo-design-system/lib/utils";
+import { toggleVariants } from "dubo-design-system/components/ui/toggle";
 
 /**
  * Dubo Design System — Toggle Group

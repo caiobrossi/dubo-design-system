@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "@dubo/design-system-shared/styles/theme.css";
-@import "@dubo/design-system-shared/styles/badge-info3-tokens.css";
+@import "dubo-design-system/styles/theme.css";
+@import "dubo-design-system/styles/badge-info3-tokens.css";
 @source "../../../../packages/design-system/src";
 
 /* ── Tailwind v4 Theme (migrated from tailwind.config.js) ── */

@@ -1,4 +1,4 @@
-export { cn } from "@dubo/design-system-shared/lib/utils";
+export { cn } from "dubo-design-system/lib/utils";
 
 export function humanizeSlug(slug: string) {
   return slug

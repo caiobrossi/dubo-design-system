@@ -3,10 +3,10 @@
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
-import { X } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
-import { modalTitleClass } from "@dubo/design-system-shared/components/ui/modal-typography";
+import { X } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
+import { modalTitleClass } from "dubo-design-system/components/ui/modal-typography";
 
 /**
  * Dubo Design System -- Dialog (modal)

@@ -5,7 +5,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 const emptyStateVariants = cva("flex flex-col items-center justify-center text-center", {
   variants: {

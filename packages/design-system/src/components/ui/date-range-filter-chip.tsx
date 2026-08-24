@@ -2,10 +2,10 @@
 
 import * as React from "react";
 
-import { Button } from "@dubo/design-system-shared/components/ui/button";
-import { DatePicker } from "@dubo/design-system-shared/components/ui/date-picker";
-import { FilterChip } from "@dubo/design-system-shared/components/ui/filter-chip";
-import { Separator } from "@dubo/design-system-shared/components/ui/separator";
+import { Button } from "dubo-design-system/components/ui/button";
+import { DatePicker } from "dubo-design-system/components/ui/date-picker";
+import { FilterChip } from "dubo-design-system/components/ui/filter-chip";
+import { Separator } from "dubo-design-system/components/ui/separator";
 
 export type DateRangeFilterPreset<TPreset extends string = string> = {
   key: TPreset;

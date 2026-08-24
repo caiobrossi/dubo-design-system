@@ -7,8 +7,8 @@ import {
   getDesktopPaginationItems,
   getMobilePaginationItems,
   ResponsivePagination,
-} from "@dubo/design-system-shared/components/ui/pagination";
-import { DesignSystemLabelsProvider } from "@dubo/design-system-shared/lib/labels";
+} from "dubo-design-system/components/ui/pagination";
+import { DesignSystemLabelsProvider } from "dubo-design-system/lib/labels";
 
 function renderPagination(currentPage: number, totalPages: number) {
   return renderToStaticMarkup(

@@ -1,15 +1,15 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown, X } from "@dubo/design-system-shared/lib/icons";
+import { ChevronDown, X } from "dubo-design-system/lib/icons";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@dubo/design-system-shared/components/ui/popover";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+} from "dubo-design-system/components/ui/popover";
+import { cn } from "dubo-design-system/lib/utils";
 
 const filterChipVariants = cva(
   [

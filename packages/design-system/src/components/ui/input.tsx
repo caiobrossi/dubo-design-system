@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { X } from "@dubo/design-system-shared/lib/icons";
+import { X } from "dubo-design-system/lib/icons";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
 import { Label } from "./label";
 import {
   fieldBodyLgClass,
@@ -17,7 +17,7 @@ import {
   floatingLabelCompactFilledClass,
   floatingLabelCompactFocusClass,
   floatingLabelIdleClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 
 /**
  * Dubo Design System — Input

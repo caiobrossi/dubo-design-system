@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { ChevronDown } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 type StatusFilterChipTone = "neutral" | "warning" | "danger" | "success" | "brand";
 

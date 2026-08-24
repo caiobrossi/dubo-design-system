@@ -8,8 +8,8 @@ import {
   type ColumnDef,
   type Row,
 } from "@tanstack/react-table";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { getColumnMeta, type ColumnMobileRole } from "@dubo/design-system-shared/lib/table-meta";
+import { cn } from "dubo-design-system/lib/utils";
+import { getColumnMeta, type ColumnMobileRole } from "dubo-design-system/lib/table-meta";
 
 /**
  * Dubo Design System — DataCards

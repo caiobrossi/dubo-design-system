@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { AlertTriangle } from "@dubo/design-system-shared/lib/icons";
+import { AlertTriangle } from "dubo-design-system/lib/icons";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { Button } from "@dubo/design-system-shared/components/ui/button";
+import { cn } from "dubo-design-system/lib/utils";
+import { Button } from "dubo-design-system/components/ui/button";
 
 /**
  * Dubo Design System — ErrorState

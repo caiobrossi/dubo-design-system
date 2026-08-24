@@ -11,4 +11,4 @@ export {
   type DragAndDropOrientation as DragAndDropCardsOrientation,
   type DragAndDropProps as DragAndDropCardsProps,
   type DragAndDropRenderState as DragAndDropCardsRenderState,
-} from "@dubo/design-system-shared/components/ui/drag-and-drop";
+} from "dubo-design-system/components/ui/drag-and-drop";

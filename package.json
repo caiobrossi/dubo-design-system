@@ -1,5 +1,5 @@
 {
-  "name": "dubo-design-system",
+  "name": "dubo-design-system-workspace",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -11,14 +11,15 @@
   "scripts": {
     "dev": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system dev",
     "build": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system build",
-    "build:package": "pnpm --filter @dubo/design-system-shared build",
+    "build:package": "pnpm --filter dubo-design-system build",
     "storybook": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system storybook",
     "build:storybook": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system build-storybook",
     "lint": "pnpm --filter @dubo/dubo-design-system lint",
-    "typecheck": "pnpm --filter @dubo/design-system-shared typecheck && pnpm exec tsc -p apps/dubo-design-system/tsconfig.json --noEmit",
+    "typecheck": "pnpm --filter dubo-design-system typecheck && pnpm exec tsc -p apps/dubo-design-system/tsconfig.json --noEmit",
     "test": "pnpm exec vitest run packages/design-system/src",
+    "verify:figma": "node scripts/verify-figma-package.mjs",
     "audit:design-system": "pnpm --dir apps/dubo-design-system audit:design-system",
-    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm audit:design-system && pnpm build:storybook"
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm audit:design-system && pnpm build:storybook && pnpm verify:figma"
   },
   "devDependencies": {
     "@types/node": "^20.19.37",

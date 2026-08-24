@@ -4,7 +4,7 @@
 
 import React from "react";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 const SIZE_CONFIG = {
   xs: { size: "24px", fontSize: "0.625rem" },

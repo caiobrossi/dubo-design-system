@@ -9,5 +9,6 @@
     "incremental": true,
     "tsBuildInfoFile": "./tsconfig.build.tsbuildinfo",
     "allowJs": false
-  }
+  },
+  "exclude": ["dist", "node_modules", "src/**/*.test.ts", "src/**/*.test.tsx"]
 }

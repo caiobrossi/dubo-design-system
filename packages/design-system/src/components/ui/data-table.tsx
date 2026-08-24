@@ -13,9 +13,9 @@ import {
   type VisibilityState,
   type Updater,
 } from "@tanstack/react-table";
-import { ArrowDown, ArrowUp, ArrowUpDown } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { getColumnMeta, resolveColumnVisibility } from "@dubo/design-system-shared/lib/table-meta";
+import { ArrowDown, ArrowUp, ArrowUpDown } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { getColumnMeta, resolveColumnVisibility } from "dubo-design-system/lib/table-meta";
 
 function isInteractiveTarget(target: EventTarget | null) {
   if (!(target instanceof HTMLElement)) return false;
