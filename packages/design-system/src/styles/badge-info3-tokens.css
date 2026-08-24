@@ -1,0 +1,23 @@
+/*
+ * Canonical info3 badge recipe.
+ *
+ * This is imported by each application that renders the shared Badge so its
+ * cyan/sky presentation remains identical in light and dark mode.
+ */
+:root {
+  --badge-info3-soft-bg: oklch(0.960 0.033 220);
+  --badge-info3-soft-border: oklch(0.902 0.061 221);
+  --badge-info3-soft-text: oklch(0.352 0.079 220);
+  --badge-info3-strong-bg: oklch(0.609 0.125 219);
+  --badge-info3-strong-border: oklch(0.469 0.094 220);
+  --badge-info3-strong-text: var(--color-text-on-brand, #ffffff);
+}
+
+html.dark {
+  --badge-info3-soft-bg: oklch(0.762 0.153 210 / 0.18);
+  --badge-info3-soft-border: oklch(0.931 0.062 210 / 0.32);
+  --badge-info3-soft-text: oklch(0.931 0.062 210);
+  --badge-info3-strong-bg: oklch(0.609 0.125 219);
+  --badge-info3-strong-border: oklch(0.469 0.094 220);
+  --badge-info3-strong-text: var(--color-text-on-brand, #ffffff);
+}

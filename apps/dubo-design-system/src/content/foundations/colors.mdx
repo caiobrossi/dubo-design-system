@@ -1,0 +1,113 @@
+import {
+  brandPalette,
+  slatePalette,
+  bluePalette,
+  indigoPalette,
+  cyanPalette,
+  peachPalette,
+  skyPalette,
+  tealPalette,
+  limePalette,
+  yellowPalette,
+  orangePalette,
+  tomatoPalette,
+  pinkPalette,
+  purplePalette,
+  errorPalette,
+  warningPalette,
+  successPalette,
+  semanticColorTokens,
+  overlayTokens,
+  expressiveSurfaceTokens,
+} from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { ColorSystemPreview } from "@/components/docs/color-system-preview";
+import { DocsSection } from "@/components/docs/section";
+import { SwatchGrid } from "@/components/docs/swatch-grid";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="palette"
+  title="Color Palettes"
+  description="Dubo uses OKLCH palettes for perceptual uniformity across lightness steps. The system now uses Slate as the neutral family, keeps a custom Brand Blue that matches the current CTA button, and exposes a broader set of chromatic palettes for illustrations, data viz, and future semantic expansion."
+>
+  <Callout tone="brand" title="OKLCH color format">
+    Every palette swatch shown here is the canonical OKLCH primitive from the source of truth.
+    Product code should prefer semantic tokens such as `--color-text-primary`,
+    `--color-bg-surface`, or the shared status recipes instead of reaching for raw palette values
+    directly.
+  </Callout>
+
+  <div className="grid gap-8">
+    <SwatchGrid title="Brand (Blue)" swatches={brandPalette} />
+    <SwatchGrid title="Slate (Neutral)" swatches={slatePalette} />
+    <SwatchGrid title="Blue" swatches={bluePalette} />
+    <SwatchGrid title="Indigo" swatches={indigoPalette} />
+    <SwatchGrid title="Cyan" swatches={cyanPalette} />
+    <SwatchGrid title="Peach" swatches={peachPalette} />
+    <SwatchGrid title="Sky" swatches={skyPalette} />
+    <SwatchGrid title="Teal" swatches={tealPalette} />
+    <SwatchGrid title="Lime" swatches={limePalette} />
+    <SwatchGrid title="Yellow" swatches={yellowPalette} />
+    <SwatchGrid title="Orange" swatches={orangePalette} />
+    <SwatchGrid title="Tomato" swatches={tomatoPalette} />
+    <SwatchGrid title="Pink" swatches={pinkPalette} />
+    <SwatchGrid title="Purple" swatches={purplePalette} />
+    <SwatchGrid title="Error" swatches={errorPalette} />
+    <SwatchGrid title="Warning" swatches={warningPalette} />
+    <SwatchGrid title="Success" swatches={successPalette} />
+  </div>
+</DocsSection>
+
+<DocsSection
+  id="expressive"
+  title="Expressive secondary families"
+  description="Dubo now has two softer secondary color families for more editorial, product-forward surfaces that should not be encoded as warning or info states. Peach is warm and human; Sky is calm and airy."
+>
+  <TokenTable
+    rows={expressiveSurfaceTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="preview"
+  title="Preview"
+  description="A practical comparison of the legacy cool neutrals against the new Slate family, plus the new Brand Blue and chromatic palettes in a more UI-like context."
+>
+  <ColorSystemPreview />
+</DocsSection>
+
+<DocsSection
+  id="semantic"
+  title="Semantic tokens"
+  description="Most product code should prefer semantic tokens so light and dark mode adapt automatically. These are the layer that sits between raw OKLCH primitives and component-level recipes."
+>
+  <TokenTable
+    rows={semanticColorTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "css", label: "CSS variable" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="interactions"
+  title="Interaction overlays"
+  description="Hover and pressed states use transparent semantic overlays instead of extra hardcoded fills. This keeps interaction feedback consistent across buttons, tabs, cards, menus, and any future surface built on the system."
+>
+  <TokenTable
+    rows={overlayTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+**/dist/
+.next/
+**/.next/
+storybook-static/
+**/storybook-static/
+coverage/
+**/coverage/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+.vercel/

@@ -1,0 +1,26 @@
+import { shadowScale } from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { DocsSection } from "@/components/docs/section";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="elevation"
+  title="Elevation"
+  description="Dubo prefers borders and contrast shifts over heavy shadows. Elevation is used sparingly and mostly for floating UI, while shadows remain shared recipes instead of component-specific values."
+>
+  <Callout tone="brand" title="Current principle">
+    If a border can communicate separation clearly, do not add a shadow. Shadows are reserved for
+    overlays, menus and surfaces that sit above the page. OKLCH-based shadow colors ensure
+    consistent perceived darkness across light and dark themes.
+  </Callout>
+
+  <TokenTable
+    rows={shadowScale}
+    columns={[
+      { key: "name", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+      { key: "when", label: "When to use" },
+    ]}
+  />
+</DocsSection>

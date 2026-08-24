@@ -1,0 +1,360 @@
+@import "tailwindcss";
+@import "@dubo/design-system-shared/styles/theme.css";
+@import "@dubo/design-system-shared/styles/badge-info3-tokens.css";
+@source "../../../../packages/design-system/src";
+
+/* ── Tailwind v4 Theme (migrated from tailwind.config.js) ── */
+@theme {
+  /* Documentation-only aliases not yet represented by semantic tokens */
+  --color-brand-primary: oklch(0.391 0.189 268.3);
+  --color-white: oklch(1 0 0);
+
+  /* Shadows */
+  --shadow-sm: 0px 1px 2px 0px oklch(0 0 0 / 0.05);
+  --shadow-default: 0px 1px 2px 0px oklch(0 0 0 / 0.05);
+  --shadow-md: 0px 4px 16px -2px oklch(0 0 0 / 0.08), 0px 2px 4px -1px oklch(0 0 0 / 0.08);
+  --shadow-lg: 0px 12px 32px -4px oklch(0 0 0 / 0.08), 0px 4px 8px -2px oklch(0 0 0 / 0.08);
+  --shadow-overlay: 0px 12px 32px -4px oklch(0 0 0 / 0.08), 0px 4px 8px -2px oklch(0 0 0 / 0.08);
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-DEFAULT: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --radius-xlarge: 24px;
+  --radius-xxlarge: 32px;
+
+  /* Background images */
+  --background-image-docs-grid: none;
+  --background-image-hero-radial: none;
+
+  /* Keyframes */
+  @keyframes nav-slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  --animate-nav-slide-in: nav-slide-in 0.2s ease-out;
+
+  /* Progress indeterminate shimmer */
+  @keyframes progress-indeterminate {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  --animate-progress-indeterminate: progress-indeterminate 1.5s ease-in-out infinite;
+}
+
+/* Max-width breakpoint (v4 @theme only supports min-width) */
+@variant mobile (@media (max-width: 767px));
+
+/* ── Animation utilities (replaces tailwindcss-animate) ── */
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0)
+      scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1))
+      rotate(var(--tw-enter-rotate, 0));
+  }
+}
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0)
+      scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1))
+      rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+@utility animate-in {
+  animation-name: enter;
+  animation-duration: 150ms;
+  --tw-enter-opacity: initial;
+  --tw-enter-scale: initial;
+  --tw-enter-translate-x: initial;
+  --tw-enter-translate-y: initial;
+  --tw-enter-rotate: initial;
+}
+@utility animate-out {
+  animation-name: exit;
+  animation-duration: 150ms;
+  --tw-exit-opacity: initial;
+  --tw-exit-scale: initial;
+  --tw-exit-translate-x: initial;
+  --tw-exit-translate-y: initial;
+  --tw-exit-rotate: initial;
+}
+@utility fade-in-0 {
+  --tw-enter-opacity: 0;
+}
+@utility fade-out-0 {
+  --tw-exit-opacity: 0;
+}
+@utility zoom-in-95 {
+  --tw-enter-scale: 0.95;
+}
+@utility zoom-out-95 {
+  --tw-exit-scale: 0.95;
+}
+@utility slide-in-from-top-2 {
+  --tw-enter-translate-y: -0.5rem;
+}
+@utility slide-in-from-bottom-2 {
+  --tw-enter-translate-y: 0.5rem;
+}
+@utility slide-in-from-left-2 {
+  --tw-enter-translate-x: -0.5rem;
+}
+@utility slide-in-from-right-2 {
+  --tw-enter-translate-x: 0.5rem;
+}
+/* Full slide (100%) — for Sheet, Drawer panels */
+@utility slide-in-from-top {
+  --tw-enter-translate-y: -100%;
+}
+@utility slide-in-from-bottom {
+  --tw-enter-translate-y: 100%;
+}
+@utility slide-in-from-left {
+  --tw-enter-translate-x: -100%;
+}
+@utility slide-in-from-right {
+  --tw-enter-translate-x: 100%;
+}
+@utility slide-out-to-top {
+  --tw-exit-translate-y: -100%;
+}
+@utility slide-out-to-bottom {
+  --tw-exit-translate-y: 100%;
+}
+@utility slide-out-to-left {
+  --tw-exit-translate-x: -100%;
+}
+@utility slide-out-to-right {
+  --tw-exit-translate-x: 100%;
+}
+
+@keyframes dropdownScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(var(--motion-dropdown-enter-scale-from)) translateZ(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+}
+
+@utility animate-dropdownScaleIn {
+  animation: dropdownScaleIn var(--motion-dropdown-enter-duration)
+    var(--motion-dropdown-enter-easing);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+@keyframes tooltipIn {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--motion-tooltip-enter-x-from));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tooltipOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(var(--motion-tooltip-enter-x-from));
+  }
+}
+
+@utility animate-tooltipIn {
+  animation: tooltipIn var(--motion-tooltip-enter-duration) var(--motion-tooltip-enter-easing)
+    forwards;
+  will-change: transform, opacity;
+}
+
+@utility animate-tooltipOut {
+  animation: tooltipOut var(--motion-tooltip-exit-duration) var(--motion-tooltip-exit-easing)
+    forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes overlayIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@utility animate-overlayIn {
+  animation: overlayIn var(--motion-overlay-enter-duration) var(--motion-overlay-enter-easing)
+    forwards;
+}
+
+@utility animate-overlayOut {
+  animation: overlayOut var(--motion-overlay-exit-duration) var(--motion-overlay-exit-easing)
+    forwards;
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: scale(var(--motion-modal-enter-scale-from))
+      translateY(var(--motion-modal-enter-y-from));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@utility animate-modalIn {
+  animation: modalIn var(--motion-modal-enter-duration) var(--motion-modal-enter-easing) both;
+}
+
+/* ── Caret blink animation for OTP input ── */
+@keyframes caret-blink {
+  0%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  50% {
+    opacity: 0;
+  }
+}
+@utility animate-caret-blink {
+  animation: caret-blink 1.25s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Base styles
+   ───────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-open-sans), "Open Sans", sans-serif;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar) transparent;
+}
+
+*::selection {
+  background: oklch(0.514 0.224 268.7 / 0.16);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
+.glass-panel {
+  background: var(--color-bg-surface);
+  backdrop-filter: none;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.docs-prose {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25rem;
+}
+
+.docs-prose h2:not(:first-child) {
+  margin-top: 0;
+}
+
+.docs-prose p + p {
+  margin-top: 0.75rem;
+}
+
+.bg-docs-grid {
+  background-image: none !important;
+}
+
+.bg-hero-radial {
+  background-image: none !important;
+}

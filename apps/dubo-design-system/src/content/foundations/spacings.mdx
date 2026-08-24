@@ -1,0 +1,51 @@
+import { spacingScale } from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { DocsSection } from "@/components/docs/section";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="scale"
+  title="Spacing scale"
+  description="Spacing is built on a 4px rhythm and exposed as shared `--space-*` tokens. Small, medium and large jumps are enough for most of the current product."
+>
+  <Callout tone="brand" title="Current principle">
+    Reach for shared spacing tokens before inventing local padding or gap values. Most component
+    layouts in the current system can be composed from `--space-1` through `--space-8`.
+  </Callout>
+
+  <TokenTable
+    rows={spacingScale}
+    columns={[
+      { key: "px", label: "Pixels" },
+      { key: "tailwind", label: "Tailwind" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="rhythm"
+  title="Layout rhythm"
+  description="The current UI works best when spacing is consistent inside each layer of the hierarchy, so components can share recipes instead of carrying one-off spacing tokens."
+>
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <p className="text-body-md font-medium text-default-font">Micro</p>
+      <p className="mt-3 text-body-md text-subtext-color">
+        4px to 8px for inline actions, icon spacing and compact controls.
+      </p>
+    </div>
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <p className="text-body-md font-medium text-default-font">Component</p>
+      <p className="mt-3 text-body-md text-subtext-color">
+        12px to 24px for card padding, stacked fields and local grouping.
+      </p>
+    </div>
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <p className="text-body-md font-medium text-default-font">Page</p>
+      <p className="mt-3 text-body-md text-subtext-color">
+        24px to 32px for section rhythm, larger splits and page scaffolding.
+      </p>
+    </div>
+  </div>
+</DocsSection>

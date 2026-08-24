@@ -1,0 +1,11 @@
+/* Load Poppins for Storybook — Next.js font loader doesn't run here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*
+  Next.js creates --font-poppins via next/font. In Storybook we need to
+  set the fallback so all components that reference var(--font-poppins)
+  still get Poppins.
+*/
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+}

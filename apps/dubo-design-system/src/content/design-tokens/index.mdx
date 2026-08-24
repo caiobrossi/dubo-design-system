@@ -1,0 +1,142 @@
+import {
+  designTokens,
+  interactionTokens,
+  frostedGlassTokens,
+  componentTokens,
+  overlayTokens,
+  expressiveSurfaceTokens,
+} from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { DocsSection } from "@/components/docs/section";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="architecture"
+  title="3-layer token architecture"
+  description="Dubo's design tokens follow a strict 3-layer hierarchy that separates raw values from intent and keeps component decisions local."
+>
+  <Callout tone="brand" title="OKLCH color format">
+    All color primitives are defined in OKLCH — a perceptually uniform color space
+    that produces consistent lightness across hues. This means a brand-500 and a
+    success-500 look equally vibrant, making the palette composable by default.
+  </Callout>
+
+**Layer 1 — Primitives** are raw, context-free values: color scales (brand blue, slate,
+indigo, cyan, teal, lime, yellow, orange, pink, tomato, error, warning, success, purple), radius steps, shadow depths, and spacing units.
+They never appear directly in components.
+
+**Layer 2 — Semantic** tokens map primitives to intent: `color-brand`, `color-bg-page`,
+`color-text-primary`, `color-border`. They adapt to light/dark mode via CSS custom
+properties and are what components should reference.
+
+**Layer 3 — Component** tokens now exist only when a component keeps a truly unique
+decision: examples include `btn-primary-shadow`, `segment-pill-shadow` or
+`avatar-group-overlap`. Most sizing, spacing, color and typography concerns were
+intentionally pushed back into shared semantic roles.
+
+This composability means you can re-theme the entire system by swapping primitives,
+adjust semantic intent for a product vertical, or override a single component —
+without side effects.
+
+</DocsSection>
+
+<DocsSection
+  id="catalog"
+  title="Full token catalog"
+  description="Every token across all three layers — primitives, semantic and component — in one consolidated table. Values are resolved at build time from design-tokens.ts."
+>
+  <TokenTable
+    rows={designTokens}
+    columns={[
+      { key: "category", label: "Category" },
+      { key: "name", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="interaction"
+  title="Interaction tokens"
+  description="Shared transition durations, easing curves, focus ring styles and disabled states that keep interactive behaviour consistent across every component."
+>
+  <TokenTable
+    rows={interactionTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="overlays"
+  title="Overlay tokens"
+  description="Transparent overlays for hover and pressed states. Light mode uses slate-900 alpha, dark mode uses slate-0 alpha, and brand-tinted variants use brand-blue alpha."
+>
+  <TokenTable
+    rows={overlayTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="expressive"
+  title="Expressive surface recipes"
+  description="Secondary warm/cool families and the canonical Dubo product gradient recipe used for richer, more branded surfaces without overloading feedback semantics."
+>
+  <TokenTable
+    rows={expressiveSurfaceTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="frosted-glass"
+  title="Frosted glass tokens"
+  description="Background blurs, translucent fills and border opacities for the frosted glass aesthetic used in navigation bars, floating panels and hero sections."
+>
+  <Callout tone="info" title="Composability">
+    Glass tokens combine a translucent background, a backdrop blur value, a border
+    opacity and a saturation boost. Mix and match to create light, dark or
+    brand-tinted glass surfaces.
+  </Callout>
+
+  <TokenTable
+    rows={frostedGlassTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="component-tokens"
+  title="Component token summary"
+  description="Each component owns a local set of tokens that reference semantic values. This table summarises the token surface per component — see individual component pages for full details."
+>
+  <TokenTable
+    rows={componentTokens.map((c) => ({
+      component: c.component,
+      tokens: c.tokens.join(", "),
+      description: c.description,
+    }))}
+    columns={[
+      { key: "component", label: "Component" },
+      { key: "tokens", label: "Tokens" },
+      { key: "description", label: "Description" },
+    ]}
+  />
+</DocsSection>

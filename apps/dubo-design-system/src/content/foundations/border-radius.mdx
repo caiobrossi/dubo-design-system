@@ -1,0 +1,54 @@
+import { radiusScale } from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { DocsSection } from "@/components/docs/section";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="scale"
+  title="Radius scale"
+  description="Radius is one of the strongest Dubo visual signatures. It should feel soft and intentional, never arbitrary, and it should usually come from shared control or surface roles."
+>
+  <Callout tone="brand" title="Current principle">
+    Prefer shared radius roles first: pill controls use `--radius-control-pill`, soft
+    affordances use `--radius-control-soft`, inputs use `--radius-control-input`, and larger
+    containers step through the shared radius scale.
+  </Callout>
+
+  <TokenTable
+    rows={radiusScale}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="rules"
+  title="Usage rules"
+  description="Keep the system readable by choosing radius based on component role, not personal preference."
+>
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <p className="text-body-md font-medium text-default-font">Small UI</p>
+      <p className="mt-3 text-body-md text-subtext-color">
+        Inputs and compact form controls should usually reuse the shared input/control radius
+        instead of defining local corner values.
+      </p>
+    </div>
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <p className="text-body-md font-medium text-default-font">Containers</p>
+      <p className="mt-3 text-body-md text-subtext-color">
+        Cards, panels and drawers should climb the shared surface radius scale instead of creating
+        component-only container radii.
+      </p>
+    </div>
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <p className="text-body-md font-medium text-default-font">Actions</p>
+      <p className="mt-3 text-body-md text-subtext-color">
+        Buttons, badges, toggles and many chips reuse the shared pill radius for a friendlier feel.
+      </p>
+    </div>
+  </div>
+</DocsSection>

@@ -1,0 +1,31 @@
+{
+  "name": "dubo-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system dev",
+    "build": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system build",
+    "build:package": "pnpm --filter @dubo/design-system-shared build",
+    "storybook": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system storybook",
+    "build:storybook": "pnpm run build:package && pnpm --filter @dubo/dubo-design-system build-storybook",
+    "lint": "pnpm --filter @dubo/dubo-design-system lint",
+    "typecheck": "pnpm --filter @dubo/design-system-shared typecheck && pnpm exec tsc -p apps/dubo-design-system/tsconfig.json --noEmit",
+    "test": "pnpm exec vitest run packages/design-system/src",
+    "audit:design-system": "pnpm --dir apps/dubo-design-system audit:design-system",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm audit:design-system && pnpm build:storybook"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.37",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.1"
+  }
+}

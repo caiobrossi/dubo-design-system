@@ -1,0 +1,81 @@
+import { fontWeightScale, typographyScale } from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { DocsSection } from "@/components/docs/section";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="scale"
+  title="Type scale"
+  description="The current system uses Poppins for headings and Open Sans for body text, consumed through shared roles rather than ad-hoc font declarations."
+>
+  <Callout tone="brand" title="Current principle">
+    Use typography roles first. In practice that means choosing shared tokens such as
+    `text-body-sm`, `text-body-md`, `text-heading-2`, or `text-heading-4`
+    instead of creating component-specific font-size tokens. Font weight remains a separate utility.
+  </Callout>
+
+  <TokenTable
+    rows={typographyScale}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "utility", label: "Tailwind utility" },
+      { key: "family", label: "Family" },
+      { key: "size", label: "Size" },
+      { key: "lineHeight", label: "Line height" },
+      { key: "recommendedWeight", label: "Recommended weight" },
+      { key: "usage", label: "Usage" },
+      {
+        key: "example",
+        label: "Example",
+        render: (row) => (
+          <span className={`${row.utility} ${row.weightUtility} text-default-font`}>
+            {row.example}
+          </span>
+        ),
+      },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="weights"
+  title="Font weights"
+  description="All shared font weights are available as first-class tokens so components can reuse them without inventing local names or magic numbers."
+>
+  <Callout tone="brand" title="Preferred usage">
+    Keep using typography roles first, but when you need a weight token directly, use
+    `--font-weight-300`, `--font-weight-400`, `--font-weight-500`, `--font-weight-600`, or
+    `--font-weight-700` instead of hardcoding numeric font weights.
+  </Callout>
+
+  <TokenTable
+    rows={fontWeightScale}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "css", label: "CSS Variable" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="rules"
+  title="Usage rules"
+  description="The hierarchy is intentionally restrained so the interface feels calm and clinical rather than over-designed, and so multiple components can reuse the same roles without inventing local typography systems."
+>
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <div className="text-heading-4 font-medium text-default-font">Headings stay compact</div>
+      <div className="mt-3 text-body-md text-subtext-color">
+        The product relies more on spacing, borders and grouping than on huge text jumps.
+      </div>
+    </div>
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5">
+      <div className="text-heading-4 font-medium text-default-font">Body is stable</div>
+      <div className="mt-3 text-body-md text-subtext-color">
+        Most interface text lives at 14px or 16px depending on density and context.
+      </div>
+    </div>
+  </div>
+</DocsSection>

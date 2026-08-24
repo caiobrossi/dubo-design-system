@@ -1,0 +1,89 @@
+import {
+  overlayTokens,
+  frostedGlassTokens,
+  interactionTokens,
+} from "@dubo/design-system/foundations";
+import { Callout } from "@/components/docs/callout";
+import { DocsSection } from "@/components/docs/section";
+import { TokenTable } from "@/components/docs/token-table";
+
+<DocsSection
+  id="glass"
+  title="Frosted glass"
+  description="The Dubo UI uses soft transparency and blur in selected areas. All glass tokens come from the source of truth and use OKLCH values for perceptually uniform transparency across themes."
+>
+  <Callout tone="brand" title="Current principle">
+    Reserve glass for banners, overlays, floating navigation or hero surfaces that benefit from a
+    lighter material feel. It should remain a shared recipe, not a custom effect recreated per
+    component.
+  </Callout>
+
+  <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
+    <div className="rounded-[24px] border border-[var(--color-border)] bg-[linear-gradient(180deg,oklch(1_0_0_/_0.78),oklch(1_0_0_/_0.58))] p-7 shadow-sm backdrop-blur-xl">
+      <p className="text-body-md font-medium text-subtext-color">Example surface</p>
+      <h3 className="mt-3 text-heading-1 font-medium tracking-[-0.02em] text-default-font">
+        Glass works best when it stays restrained and readable.
+      </h3>
+      <p className="mt-3 max-w-xl text-body-md text-subtext-color">
+        Use blur, soft borders and subtle transparency to separate overlays or floating surfaces
+        without introducing a second visual system.
+      </p>
+    </div>
+
+    <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-6">
+      <p className="text-body-md font-medium text-default-font">Ingredients</p>
+      <ul className="mt-4 space-y-2 text-body-md text-subtext-color">
+        <li>High radius on the outer container</li>
+        <li>Low-contrast border</li>
+        <li>Backdrop blur for separation</li>
+        <li>Quiet transparency, never loud gradients</li>
+      </ul>
+    </div>
+
+  </div>
+</DocsSection>
+
+<DocsSection
+  id="glass-tokens"
+  title="Frosted glass tokens"
+  description="Background, blur, border and saturation tokens for building glass surfaces. Values reference OKLCH primitives from design-tokens."
+>
+  <TokenTable
+    rows={frostedGlassTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="interaction"
+  title="Interaction overlays"
+  description="Hover and active transitions use transparent semantic overlays instead of introducing extra local color systems or component-only hover tokens."
+>
+  <TokenTable
+    rows={overlayTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
+
+<DocsSection
+  id="interaction-tokens"
+  title="Interaction tokens"
+  description="Shared transition durations, easing curves, disabled states and focus ring values used across all interactive components. These should be reused before adding component-specific motion tokens."
+>
+  <TokenTable
+    rows={interactionTokens}
+    columns={[
+      { key: "token", label: "Token" },
+      { key: "value", label: "Value" },
+      { key: "usage", label: "Usage" },
+    ]}
+  />
+</DocsSection>
