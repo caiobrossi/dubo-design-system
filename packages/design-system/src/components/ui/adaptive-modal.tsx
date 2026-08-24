@@ -6,8 +6,8 @@ import {
   Dialog,
   DialogContent,
   type DialogContentProps,
-} from "@dubo/design-system-shared/components/ui/dialog";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+} from "dubo-design-system/components/ui/dialog";
+import { cn } from "dubo-design-system/lib/utils";
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = React.useState(false);

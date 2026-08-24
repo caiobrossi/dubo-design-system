@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { Command as CommandPrimitive } from "cmdk";
-import { Search } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { Search } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 /**
  * Dubo Design System — Command

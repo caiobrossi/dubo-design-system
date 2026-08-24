@@ -15,9 +15,9 @@
 
 import * as React from "react";
 import { format as formatDate } from "date-fns";
-import { CalendarDays, X } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
+import { CalendarDays, X } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
 import {
   fieldBodyMdClass,
   fieldBodyLgClass,
@@ -27,7 +27,7 @@ import {
   fieldLabelClass,
   fieldTransitionClass,
   floatingLabelCompactClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 import { Calendar, type CalendarProps, type IndicatorMap } from "./calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 import { useMobileNativeControl } from "./mobile-native-control";

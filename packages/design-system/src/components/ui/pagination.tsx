@@ -5,9 +5,9 @@ import {
   ChevronsLeft,
   ChevronsRight,
   MoreHorizontal,
-} from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { fieldTransitionClass } from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { fieldTransitionClass } from "dubo-design-system/components/ui/field-styles";
 import { useDesignSystemLabel } from "../../lib/labels";
 
 /**

@@ -13,7 +13,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@dubo/design-system-shared": "workspace:*",
+    "dubo-design-system": "workspace:*",
     "@base-ui/react": "^1.3.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",

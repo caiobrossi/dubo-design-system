@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { cn } from "./lib/utils";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
-const themeImport = '@import "@dubo/design-system-shared/styles/theme.css";';
+const themeImport = '@import "dubo-design-system/styles/theme.css";';
 const consumerStylesheets = ["apps/dubo-design-system/src/app/globals.css"];
 const executableRoots = [
   "apps/dubo-design-system/src",
@@ -131,7 +131,7 @@ describe("design system theme contract", () => {
     );
 
     expect(designSystemMerger).toContain(
-      'export { cn } from "@dubo/design-system-shared/lib/utils"'
+      'export { cn } from "dubo-design-system/lib/utils"'
     );
     expect(designSystemMerger).not.toContain('from "tailwind-merge"');
   });

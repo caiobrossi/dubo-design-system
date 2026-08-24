@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "@dubo/design-system-shared/lib/icons";
+import { ChevronLeft, ChevronRight } from "dubo-design-system/lib/icons";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 export interface WeekdayPickerItem {
   id: string;

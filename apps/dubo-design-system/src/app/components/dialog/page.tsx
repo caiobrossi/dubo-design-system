@@ -46,7 +46,7 @@ const typographyRows = [
   {
     item: "Section title",
     details:
-      "Use modalSectionTitleClass from @dubo/design-system-shared/components/ui/modal-typography for the shared 20px, weight 300, 1.2 line-height and primary-text treatment.",
+      "Use modalSectionTitleClass from dubo-design-system/components/ui/modal-typography for the shared 20px, weight 300, 1.2 line-height and primary-text treatment.",
   },
   {
     item: "Local overrides",

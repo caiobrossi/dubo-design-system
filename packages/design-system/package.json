@@ -1,18 +1,53 @@
 {
-  "name": "@dubo/design-system-shared",
+  "name": "dubo-design-system",
   "version": "0.1.0",
-  "private": true,
+  "description": "Dubo design tokens and accessible React components for calm, precise clinical software.",
   "license": "UNLICENSED",
+  "author": "Dubo",
+  "homepage": "https://github.com/caiobrossi/dubo-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/caiobrossi/dubo-design-system/issues"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "react-18",
+    "figma-make",
+    "vite",
+    "typescript",
+    "accessibility",
+    "healthcare",
+    "dental"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/caiobrossi/dubo-design-system.git",
+    "url": "git+https://github.com/caiobrossi/dubo-design-system.git",
     "directory": "packages/design-system"
   },
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
-    "dist"
+    "dist",
+    "figma-make"
   ],
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
     "./components/ui/*": {
       "types": "./dist/components/ui/*.d.ts",
       "import": "./dist/components/ui/*.js",
@@ -29,18 +64,23 @@
       "default": "./dist/*.js"
     },
     "./styles/badge-info3-tokens.css": "./dist/styles/badge-info3-tokens.css",
+    "./styles/figma-make.css": "./dist/styles/figma-make.css",
     "./styles/theme.css": "./dist/styles/theme.css",
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "pnpm run clean && pnpm exec tsc -p tsconfig.build.json && pnpm run generate:theme && cp src/styles/badge-info3-tokens.css dist/styles/badge-info3-tokens.css",
+    "build": "pnpm run clean && pnpm exec tsc -p tsconfig.build.json && pnpm run fix:esm && pnpm run generate:theme && cp src/styles/badge-info3-tokens.css dist/styles/badge-info3-tokens.css && pnpm run generate:figma-css",
     "clean": "rm -rf dist tsconfig.build.tsbuildinfo",
+    "fix:esm": "node scripts/fix-esm-imports.mjs",
+    "generate:figma-css": "node scripts/generate-figma-css.mjs",
     "generate:theme": "pnpm exec tsx scripts/generate-theme.mjs",
+    "prepack": "pnpm run build",
+    "prepublishOnly": "pnpm run typecheck",
     "typecheck": "pnpm exec tsc -p tsconfig.build.json --noEmit"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=18.2.0 <20",
+    "react-dom": ">=18.2.0 <20"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
@@ -48,6 +88,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vitest": "^4.1.1"

@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { ChevronDown, X } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
+import { ChevronDown, X } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
 import { parsePhoneNumber, getCountryCallingCode, type CountryCode } from "libphonenumber-js";
 import { getCountries } from "react-phone-number-input";
 import pt from "react-phone-number-input/locale/pt";
@@ -20,14 +20,14 @@ import {
   floatingLabelCompactFilledClass,
   floatingLabelCompactFocusClass,
   floatingLabelIdleClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@dubo/design-system-shared/components/ui/popover";
-import { ScrollArea } from "@dubo/design-system-shared/components/ui/scroll-area";
-import { SearchField } from "@dubo/design-system-shared/components/ui/search-field";
+} from "dubo-design-system/components/ui/popover";
+import { ScrollArea } from "dubo-design-system/components/ui/scroll-area";
+import { SearchField } from "dubo-design-system/components/ui/search-field";
 
 const phoneFieldVariants = cva(
   [

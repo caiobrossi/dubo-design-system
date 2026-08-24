@@ -35,8 +35,8 @@
 import * as React from "react";
 import { DayPicker, type DayPickerProps, type DayButtonProps } from "react-day-picker";
 import { enUS, es, pt as ptPT, type Locale as DateFnsLocale } from "date-fns/locale";
-import { ChevronDown, ChevronLeft, ChevronRight } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { ChevronDown, ChevronLeft, ChevronRight } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 // ── Indicator types ──
 

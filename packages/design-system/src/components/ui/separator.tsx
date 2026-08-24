@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 /**
  * Dubo Design System — Separator

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 export type LayoutCardProps = React.HTMLAttributes<HTMLDivElement>;
 

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@dubo/design-system-shared/*": [
+      "dubo-design-system/*": [
         "./src/*"
       ],
       "@dubo-design/*": [

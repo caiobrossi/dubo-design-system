@@ -19,8 +19,8 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { GripVertical } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { GripVertical } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 export interface DragAndDropCardsItem {
   id: string;

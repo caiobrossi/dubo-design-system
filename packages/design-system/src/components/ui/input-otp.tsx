@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { OTPInput, OTPInputContext } from "input-otp";
-import { Minus } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { Minus } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 /**
  * Dubo Design System — Input OTP

@@ -4,8 +4,8 @@ import * as React from "react";
 import { Slot, Slottable } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { Spinner } from "@dubo/design-system-shared/components/ui/spinner";
+import { cn } from "dubo-design-system/lib/utils";
+import { Spinner } from "dubo-design-system/components/ui/spinner";
 
 type LegacyButtonVariant =
   | "brand-primary"

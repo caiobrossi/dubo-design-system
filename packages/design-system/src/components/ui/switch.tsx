@@ -3,8 +3,8 @@
 import * as React from "react";
 import * as SwitchPrimitive from "@radix-ui/react-switch";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { fieldBodyLgClass } from "@dubo/design-system-shared/components/ui/field-styles";
+import { cn } from "dubo-design-system/lib/utils";
+import { fieldBodyLgClass } from "dubo-design-system/components/ui/field-styles";
 
 /**
  * Dubo Design System — Switch

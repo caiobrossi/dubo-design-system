@@ -7,23 +7,23 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
   X,
-} from "@dubo/design-system-shared/lib/icons";
+} from "dubo-design-system/lib/icons";
 
-import { Avatar } from "@dubo/design-system-shared/components/ui/avatar";
-import { Button } from "@dubo/design-system-shared/components/ui/button";
+import { Avatar } from "dubo-design-system/components/ui/avatar";
+import { Button } from "dubo-design-system/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@dubo/design-system-shared/components/ui/popover";
+} from "dubo-design-system/components/ui/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@dubo/design-system-shared/components/ui/tooltip";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
+} from "dubo-design-system/components/ui/tooltip";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
 
 const tooltipVariants = {
   hidden: {

@@ -3,14 +3,14 @@
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
-import { X } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { X } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 import {
   fieldBodyMdClass,
   fieldTransitionClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
-import { modalTitleClass } from "@dubo/design-system-shared/components/ui/modal-typography";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
+} from "dubo-design-system/components/ui/field-styles";
+import { modalTitleClass } from "dubo-design-system/components/ui/modal-typography";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
 
 /**
  * Dubo Design System — Sheet (side panel / drawer)

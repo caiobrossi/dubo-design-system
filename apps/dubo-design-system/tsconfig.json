@@ -27,7 +27,7 @@
       "@/*": [
         "./src/*"
       ],
-      "@dubo/design-system-shared/*": [
+      "dubo-design-system/*": [
         "../../packages/design-system/src/*"
       ],
       "@dubo/design-system/foundations": [

@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Info } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { Info } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
 
 /**
  * Dubo Design System — Label

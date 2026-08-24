@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import { cva } from "class-variance-authority";
-import { GripVertical, Maximize2, Minus, X } from "@dubo/design-system-shared/lib/icons";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
-import { Button } from "@dubo/design-system-shared/components/ui/button";
+import { GripVertical, Maximize2, Minus, X } from "dubo-design-system/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
+import { Button } from "dubo-design-system/components/ui/button";
 
 export type FloatingPanelPlacement = "bottom-left" | "bottom-right" | "bottom-center";
 export type FloatingPanelStrategy = "fixed" | "absolute";

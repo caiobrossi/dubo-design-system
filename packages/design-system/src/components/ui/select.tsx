@@ -2,11 +2,11 @@
 
 import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
-import { ChevronDown, ChevronUp, Check, X } from "@dubo/design-system-shared/lib/icons";
+import { ChevronDown, ChevronUp, Check, X } from "dubo-design-system/lib/icons";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
-import { dropdownPanelClasses } from "@dubo/design-system-shared/components/ui/dropdown-menu";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
+import { dropdownPanelClasses } from "dubo-design-system/components/ui/dropdown-menu";
 import { Label } from "./label";
 import { useMobileNativeControl } from "./mobile-native-control";
 import {
@@ -19,7 +19,7 @@ import {
   fieldTransitionClass,
   floatingLabelCompactClass,
   floatingLabelIdleClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 
 /**
  * Dubo Design System — Select

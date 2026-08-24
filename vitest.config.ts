@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^@dubo\/design-system-shared\/(.*)$/,
+        find: /^dubo-design-system\/(.*)$/,
         replacement: `${designSystemSource}/$1`,
       },
       {

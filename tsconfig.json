@@ -15,7 +15,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@dubo/design-system-shared/*": ["./packages/design-system/src/*"],
+      "dubo-design-system/*": ["./packages/design-system/src/*"],
       "@dubo-design/*": ["./packages/design-system/src/*"]
     }
   }

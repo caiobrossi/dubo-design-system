@@ -10,4 +10,4 @@ export {
   type StatsBarProps as MetricsBarProps,
   type StatsBarTrend as MetricsBarTrend,
   type StatsBarTrendTone as MetricsBarTrendTone,
-} from "@dubo/design-system-shared/components/ui/stats-bar";
+} from "dubo-design-system/components/ui/stats-bar";

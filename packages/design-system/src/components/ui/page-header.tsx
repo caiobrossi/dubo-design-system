@@ -1,11 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { ArrowLeft } from "@dubo/design-system-shared/lib/icons";
+import { ArrowLeft } from "dubo-design-system/lib/icons";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
-import { Button } from "@dubo/design-system-shared/components/ui/button";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
+import { Button } from "dubo-design-system/components/ui/button";
 
 export interface PageHeaderProps extends Omit<React.HTMLAttributes<HTMLElement>, "title"> {
   title: string | React.ReactNode;

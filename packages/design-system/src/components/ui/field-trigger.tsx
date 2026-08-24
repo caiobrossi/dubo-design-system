@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@dubo/design-system-shared/lib/utils";
-import { useDesignSystemLabel } from "@dubo/design-system-shared/lib/labels";
-import { X } from "@dubo/design-system-shared/lib/icons";
+import { cn } from "dubo-design-system/lib/utils";
+import { useDesignSystemLabel } from "dubo-design-system/lib/labels";
+import { X } from "dubo-design-system/lib/icons";
 import {
   fieldBodyLgClass,
   fieldClearActionClass,
@@ -15,7 +15,7 @@ import {
   fieldTransitionClass,
   floatingLabelCompactClass,
   floatingLabelIdleClass,
-} from "@dubo/design-system-shared/components/ui/field-styles";
+} from "dubo-design-system/components/ui/field-styles";
 
 const floatingFieldTriggerVariants = cva(
   [

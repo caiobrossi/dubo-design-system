@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Search } from "@dubo/design-system-shared/lib/icons";
+import { Search } from "dubo-design-system/lib/icons";
 
-import { Input, type InputProps } from "@dubo/design-system-shared/components/ui/input";
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { Input, type InputProps } from "dubo-design-system/components/ui/input";
+import { cn } from "dubo-design-system/lib/utils";
 
 export interface SearchFieldProps extends Omit<InputProps, "type" | "icon"> {
   clearable?: boolean;

@@ -4,7 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 const SPRING_CONFIG = {
   type: "spring" as const,

@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { ChevronRight } from "@dubo/design-system-shared/lib/icons";
+import { ChevronRight } from "dubo-design-system/lib/icons";
 
-import { cn } from "@dubo/design-system-shared/lib/utils";
+import { cn } from "dubo-design-system/lib/utils";
 
 const Breadcrumb = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"nav">>(
   ({ className, "aria-label": ariaLabel = "Breadcrumb", ...props }, ref) => (
