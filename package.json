@@ -22,7 +22,7 @@
     "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm audit:design-system && pnpm build:storybook && pnpm verify:figma"
   },
   "devDependencies": {
-    "@types/node": "^20.19.37",
+    "@types/node": "^26.4.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "tsx": "^4.20.6",
